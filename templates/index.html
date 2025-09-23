@@ -12,7 +12,7 @@
     <span class="main-header-title">YPod</span>
     <button id="theme-toggle" onclick="toggleTheme()">🌙</button>
   </header>
-  <div class="main-content-flex" style="display:flex;min-height:100vh;margin-top:56px;">
+  <div class="main-content-flex">
     <!-- Sidebar -->
     <nav class="sidebar">
       <button class="sidebar-btn selected" id="sidebar-all">♪ All Songs</button>
@@ -20,6 +20,7 @@
     </nav>
     <!-- Main Content -->
     <div class="container" style="flex:1;">
+      <div class="container-header">
       <div class="search-bar">
         <input type="text" id="query" placeholder="Search YouTube">
         <button onclick="download()">Download</button>
@@ -29,6 +30,7 @@
         <progress id="progress" value="0" max="100"></progress>
       </div>
       <h2 id="playlist-title">All Songs</h2>
+      </div>
       <div id="playlist"></div>
     </div>
   </div>
