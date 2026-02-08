@@ -57,6 +57,14 @@ def download():
         'noplaylist': True,
         'quiet': True,
         'default_search': 'ytsearch1',
+        'cookiesfrombrowser': ('firefox',),
+                'extractor_args': {
+            'youtube': {
+                'player_client': ['android']
+            }
+        },
+        'sleep_interval': 2,
+        'max_sleep_interval': 5,
         'outtmpl': f'{CACHE_DIR}/%(title).80s.%(ext)s',
         'postprocessors': [{
             'key': 'FFmpegExtractAudio',
