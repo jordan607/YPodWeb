@@ -57,9 +57,9 @@ def download():
         'noplaylist': True,
         'quiet': True,
         'default_search': 'ytsearch1',
-        'cookiesfrombrowser': ('firefox',),
-                'extractor_args': {
-            'youtube': {
+        'cookiefile': '/data/data/com.termux/files/home/cookies.txt',
+        'extractor_args': {
+        'youtube': {
                 'player_client': ['android']
             }
         },
