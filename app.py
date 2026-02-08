@@ -53,7 +53,7 @@ def download():
     data = request.get_json()
     query = data.get('query')
     ydl_opts = {
-        'format': 'bestaudio*',
+        'format': 'bestaudio/best/bestvideo+bestaudio',
         'noplaylist': True,
         'quiet': True,
         'default_search': 'ytsearch1',
