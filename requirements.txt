@@ -1,2 +1,4 @@
 Flask
 yt-dlp
+
+# docker-compose up -d --build

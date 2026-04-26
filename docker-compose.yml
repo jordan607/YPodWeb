@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  # The Python Web App
+  web_app:
+    build: .
+    container_name: python_backend
+    volumes:
+      - ./cache:/app/cache  # Mount cache directory to persist downloads and cookies
+    expose:
+      - "5000" # Flask usually runs on 5000
+  # The NGINX Proxy & Cache
+  nginx_proxy:
+    image: nginx:latest
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx-proxy.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./nginxcache:/var/cache/nginx # Persist cache in your 'cache' folder
+    depends_on:
+      - web_app
